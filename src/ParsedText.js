@@ -80,7 +80,7 @@ class ParsedText extends React.Component {
     const { parse, childrenProps, ...remainder } = { ...this.props };
 
     return (
-      <Text ref={ref => (this._root = ref)} {...remainder}>
+      <Text ref={(ref) => (this._root = ref)} {...remainder} {...childrenProps}>
         {this.getParsedText()}
       </Text>
     );
